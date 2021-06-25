@@ -7,9 +7,10 @@ from store.models import Store
 class Category(models.Model):
     """ مدل دسته بندی """
     name = models.CharField(max_length=200)
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, db_constraint=False,default=0)
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, db_constraint=False, default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
 
 
 class CategryFeature(models.Model):
